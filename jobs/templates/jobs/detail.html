@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Detalles del Software</h1>
+            <p class="lead text-muted">{{ data.summary}}</p>
+            <img src="{{ data.image.url }}" height=300>
+            <p class="lead text-muted">{{data.title}}</p>
+            <p>
+                <a href="{% url 'home' %}" class="btn btn-primary my-2">Atras</a>
+            </p>
+        </div>
+    </section>
+</main>
+{% endblock %}

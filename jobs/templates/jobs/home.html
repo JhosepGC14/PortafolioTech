@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Jhosep Guadalupe</h1>
+            <p class="lead text-muted">Hola, mi nombre es Armando y disfruto el desarrollo de aplicaciones y explorar
+                nuevas tecnologías.</p>
+            <p>
+                <a href="mailto:armando.eu.ruiz@gmail.com" class="btn btn-primary my-2">Email Me</a>
+            </p>
+            <img src="{% static 'img/armando.png' %}" height=300>
+        </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for item in data.all %}
+                <div class="col-md-4">
+                    <a href="{% url 'detail' item.id %}">
+                        <div class="card mb-4 shadow-sm">
+                            <img class='card-img-top' src="{{ item.image.url }}">
+                            <div class="card-body">
+                                <p class="card-text">{{ item.summary }}.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {%  endfor   %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
