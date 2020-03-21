@@ -1,4 +1,3 @@
-PortafolioTecnologias
 Es una pagina web donde podras verificar las tecnologias para desarrollo con su respectivo detalle. Y adicionalmente podrás agregar más.
 
 Se hizo deploy a Heroku Web Services con BD PostgreSql.
